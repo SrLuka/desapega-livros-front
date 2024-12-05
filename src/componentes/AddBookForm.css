@@ -1,0 +1,111 @@
+.add-book-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .add-book-form input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-style: italic; 
+  }
+  
+  .add-book-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-book-form button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .add-book-form .description-field {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    overflow: auto;
+    box-sizing: border-box;
+  }
+  
+  .add-book-form .description-field::placeholder {
+    font-style: italic; 
+    color: #888; 
+  }
+  
+  
+  .add-book-form .description-field {
+    vertical-align: top;
+    text-align: left;
+  }
+
+  upload-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .custom-file-upload {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .custom-file-upload:hover {
+    background-color: #0056b3;
+  }
+  
+  .custom-file-upload input {
+    display: none;
+  }
+  
+  .image-preview {
+    max-width: 150px;
+    max-height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .add-book-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px; /* Espaço acima do botão Adicionar */
+  }
+  
+  .add-book-form button:hover {
+    background-color: #0056b3;
+  }

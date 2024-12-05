@@ -1,0 +1,114 @@
+.book-list {
+  padding: 20px;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+
+.book-card {
+  background-color: #fff;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+
+.book-card:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+.book-card img {
+  width: 80%;
+  height: auto;
+  object-fit: cover; 
+  border-bottom: 2px solid #f4f4f4; 
+}
+
+
+.book-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px;
+  color: #333;
+}
+
+
+.book-card p {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0 10px 10px;
+}
+
+
+.book-card a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.book-card a:hover {
+  background-color: #0056b3;
+}
+
+
+@media (max-width: 1024px) {
+  .books {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .books {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  .books {
+    grid-template-columns: 1fr; 
+  }
+
+  
+}
+
+.book-card-footer {
+  position: relative; 
+  margin-top: 16px;
+}
+
+.solicitar-button {
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; 
+}
+
+.solicitar-button:hover {
+  background-color: #e0a800; 
+}
+
+.solicitar-button:disabled {
+  background-color: #d3d3d3;
+  color: #a9a9a9; 
+  cursor: not-allowed; 
+}
+
+.solicitar-button:hover:disabled {
+  background-color: #d3d3d3; 
+}

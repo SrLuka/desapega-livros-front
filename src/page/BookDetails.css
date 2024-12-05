@@ -1,0 +1,66 @@
+
+.book-details {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.book-details-left img {
+  max-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.book-details-right {
+  flex: 1;
+}
+
+.book-details-right h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.book-details-right p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+.book-details-right .disponivel {
+  color: green;
+  font-weight: bold;
+}
+
+.book-details-right .indisponivel {
+  color: red;
+  font-weight: bold;
+}
+
+.solicitar-button {
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 50%;
+  justify-content: center;
+}
+
+.solicitar-button.enabled {
+  background-color: #ffc107;
+  color: white;
+}
+
+.solicitar-button.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.book-details-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

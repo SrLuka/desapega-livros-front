@@ -1,0 +1,51 @@
+/* Estilo do container de lista de livros */
+.book-list {
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Cor de fundo suave para o container */
+  border-radius: 8px; /* Bordas arredondadas para o container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+  margin-top: 20px; /* Distância do topo */
+}
+
+/* Título da lista de livros */
+.book-list h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilo do grid para os livros */
+.books {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 colunas em telas grandes */
+  gap: 20px; /* Espaçamento entre os livros */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 1024px) {
+  .books {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas médias */
+  }
+}
+
+@media (max-width: 768px) {
+  .books {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas pequenas */
+  }
+}
+
+@media (max-width: 480px) {
+  .books {
+    grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+  }
+}
+
+/* Estilo para o item vazio, quando não há livros */
+.books p {
+  grid-column: span 4; /* Ocupa todas as colunas */
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}

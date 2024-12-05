@@ -1,38 +1,89 @@
-.App {
+/* Estilo do container de lista de livros */
+.book-list {
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Cor de fundo suave para o container */
+  border-radius: 8px; /* Bordas arredondadas para o container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+  margin-top: 20px; /* Distância do topo */
+}
+
+/* Título da lista de livros */
+.book-list h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Estilo do grid para os livros */
+.books {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas grandes */
+  gap: 20px; /* Espaçamento entre os livros */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Card dos livros */
+.book-card {
+  background-color: white; /* Fundo branco para destaque */
+  border: 1px solid #ddd; /* Borda leve */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 16px; /* Espaço interno */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  text-align: center; /* Centraliza o texto e imagem */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px); /* Elevação ao passar o mouse */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagem do livro */
+.book-card img {
+  width: 100%; /* Ajusta a largura à do card */
+  height: 250%; /* Mantém a proporção */
+  border-radius: 10px; /* Bordas levemente arredondadas */
+  object-fit: cover; /* Evita distorções */
+  margin-bottom: 10px; /* Espaço abaixo da imagem */
+}
+
+/* Texto do livro */
+.book-card h3 {
+  font-size: 1.2rem; /* Tamanho do título */
+  font-weight: bold;
+  margin: 10px 0; /* Espaço entre o título e o conteúdo */
+}
+
+.book-card p {
+  font-size: 0.9rem; /* Tamanho do texto */
+  color: #666; /* Cor do texto */
+  margin: 4px 0; /* Espaçamento menor */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 1024px) {
+  .books {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas médias */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 768px) {
+  .books {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas pequenas */
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 480px) {
+  .books {
+    grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilo para o item vazio, quando não há livros */
+.books p {
+  grid-column: span 4; /* Ocupa todas as colunas */
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
 }
